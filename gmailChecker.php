@@ -4,7 +4,6 @@
   based on : https://blog.0day.rocks/abusing-gmail-to-get-previously-unlisted-e-mail-addresses-41544b62b2
   thanks to x0rz
 */
-namespace Gmail{
 
     class Checker {
 
@@ -64,12 +63,7 @@ namespace Gmail{
             return $result;
         }
     }
-}
 
-namespace root {
-    use Gmail\Checker;
     $A = new Checker();
-    var_dump($A ->exist('guia.brahimfouad@gmail.com'));
-}
-
+    var_dump($A->exist('guia.brahimfouad@gmail.com')); // will return true
 ?>
